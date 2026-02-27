@@ -42,7 +42,7 @@
     pointer-events: none;
     opacity: 0.04;
     z-index: 50;
-    background: url(https://grainy-gradients.vercel.app/noise.svg);
+    background: url(/noise.svg);
 }
 
 .nav-link {
