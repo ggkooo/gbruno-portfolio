@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Hero = () => {
     return (
@@ -19,7 +19,7 @@ const Hero = () => {
                     <img
                         alt="Abstract 3D Shape"
                         className="w-16 h-16 md:w-28 md:h-28 object-cover rounded-full mix-blend-lighten border border-primary/20 animate-soft-float"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjnjzUxiUA-2QIBPzFYljcP9rKvoGTdEdFsn-U-NnCXRVNLhYZ65XJmSc4anUvQ3SDq5Bls5XpHlwgzAm6Dlh5Tn6ZlXU9DhEIypxNgyDhH29-jLBhzshV_JZSOCjcBysxwSuvgA97FvzX3rZ2hUovt8ClFjvirQQNNz83TeoozzmW4Tdo73oqjX8D0PNPswKQF7cBqqGxvuc19UkpfhBSI3y7Hz6il8L1wFMAqFq50FyBQGpFYwRNMmJNjS9P6ToYr9w0zAzQ"
+                        src="/hero-shape.png"
                     />
                 </div>
             </div>
