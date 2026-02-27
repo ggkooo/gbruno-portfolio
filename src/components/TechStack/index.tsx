@@ -11,7 +11,7 @@ const TechStack = () => {
                             <img
                                 alt="Front End"
                                 className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 group-hover:brightness-125 transition-all duration-500"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png"
+                                src="/react-icon.png"
                             />
                         </div>
                         <p className="max-w-[140px] text-[10px] text-slate-500 font-bold uppercase tracking-widest text-right leading-loose">
@@ -31,7 +31,7 @@ const TechStack = () => {
                             <img
                                 alt="Back End"
                                 className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 group-hover:brightness-125 transition-all duration-500"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/3840px-PHP-logo.svg.png"
+                                src="/php-logo.png"
                             />
                         </div>
                         <p className="max-w-[140px] text-[10px] text-slate-500 font-bold uppercase tracking-widest text-right leading-loose">
@@ -51,7 +51,7 @@ const TechStack = () => {
                             <img
                                 alt="Cloud Services"
                                 className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 group-hover:brightness-125 transition-all duration-500"
-                                src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                                src="/git-icon.png"
                             />
                         </div>
                         <p className="max-w-[140px] text-[10px] text-slate-500 font-bold uppercase tracking-widest text-right leading-loose">
