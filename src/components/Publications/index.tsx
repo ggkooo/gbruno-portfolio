@@ -6,16 +6,16 @@ const Publications = () => {
         {
             title: "SCRATCH: APRENDENDO PROGRAMAÇÃO COM PLATAFORMA LOW-CODE",
             event: "Salão do Conhecimento UNIJUÍ",
-            type: "Resumo Expandido",
+            type: "Expanded Summary",
             year: "2024",
-            award: "Premiado como Destaque em 2025",
+            award: "Awarded as a Highlight in 2025",
             icon: "code_blocks",
             file: paper1
         },
         {
             title: "PROJETO APPGO: ARQUITETURA BACKEND DO PHYSICGO",
             event: "Salão do Conhecimento UNIJUÍ",
-            type: "Resumo Expandido",
+            type: "Expanded Summary",
             year: "2025",
             icon: "account_tree",
             file: paper2
