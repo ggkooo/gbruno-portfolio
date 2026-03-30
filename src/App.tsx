@@ -7,6 +7,7 @@ import SelectedWorks from "./components/SelectedWorks"
 import CallToAction from "./components/CallToAction"
 import Footer from "./components/Footer"
 import Publications from "./components/Publications"
+import Hackathons from "./components/Hackathons"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <TechStack />
         <SelectedWorks />
         <Publications />
+        <Hackathons />
         <CallToAction />
         <Footer />
       </main>
