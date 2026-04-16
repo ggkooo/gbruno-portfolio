@@ -8,6 +8,7 @@ import CallToAction from "./components/CallToAction"
 import Footer from "./components/Footer"
 import Publications from "./components/Publications"
 import Hackathons from "./components/Hackathons"
+import Summits from "./components/Summits"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <SelectedWorks />
         <Publications />
         <Hackathons />
+        <Summits />
         <CallToAction />
         <Footer />
       </main>
