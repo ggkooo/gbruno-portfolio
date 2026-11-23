@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# gbruno-portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal de **Giordano Bruno**, desenvolvedor full stack.
+Site bilíngue (PT/EN), single page, feito com React 19, TypeScript, Tailwind CSS e Vite.
 
-Currently, two official plugins are available:
+## Rodando
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # gera dist/ com o HTML pré-renderizado
+npm run preview  # serve o build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Editando o conteúdo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Todo o conteúdo fica em [`src/data/content.ts`](src/data/content.ts): perfil, textos,
+projetos, stack, experiência e reconhecimentos. Cada texto visível é `{ pt, en }`.
+Itens marcados com `TODO` ainda precisam de informação real.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Arquivos esperados em `public/`:
+
+| Arquivo | Uso |
+| --- | --- |
+| `profile.webp`, `profile-400.webp` | Foto da seção "Sobre" em 720px e 400px de largura (sem ela, aparecem as iniciais) |
+| `cv-pt.pdf`, `cv-en.pdf` | Botão "Baixar currículo" (de acordo com o idioma) |
+| `projects/*.webp` | Screenshots opcionais (`image` em cada projeto) |
+
+## Estrutura
+
 ```
+src/
+  data/content.ts        conteúdo do site
+  i18n/                  idioma (PT/EN), persistido no localStorage
+  components/
+    ui/                  Section, reveal on scroll, Tag, ícones de marca
+    Navbar Hero About Projects Stack Experience Recognition Contact Footer
+  entry-server.tsx       renderiza a página no build
+scripts/prerender.mjs    injeta o HTML (PT e EN) em dist/index.html
+public/fonts/            Inter e Montserrat, só latim e os pesos usados
+```
+
+## Performance
+
+O build gera o HTML da página pronto, nos dois idiomas. Um script inline escolhe o
+idioma antes da primeira pintura, e o JS do React carrega depois disso, só para
+hidratar a página. Assim o conteúdo aparece sem esperar o JavaScript.
+
+As fontes em `public/fonts/` são subsets: Inter 400 a 700 e Montserrat 700 a 900,
+só com caracteres latinos. Se precisar de outro peso ou caractere, gere de novo com
+`fonttools` (`varLib.instancer` e `subset`) a partir dos arquivos originais.
