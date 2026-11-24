@@ -27,9 +27,11 @@ const Hero = () => {
                     <a href="#projects" className="btn-primary">
                         {t(ui.hero.ctaProjects)} <ArrowDown size={16} aria-hidden />
                     </a>
-                    <a href={t(profile.cv)} className="btn-ghost" download>
-                        <Download size={16} aria-hidden /> {t(ui.hero.ctaCv)}
-                    </a>
+                    {profile.cv && (
+                        <a href={t(profile.cv)} className="btn-ghost" download>
+                            <Download size={16} aria-hidden /> {t(ui.hero.ctaCv)}
+                        </a>
+                    )}
                     <div className="ml-1 flex items-center gap-1">
                         <a href={profile.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="grid h-11 w-11 place-items-center rounded-full text-muted hover:text-white transition-colors">
                             <GitHubIcon />
