@@ -26,8 +26,11 @@ export const profile = {
     /** Put the photo at public/profile.webp. Initials are shown until it exists. */
     photo: '/profile.webp',
     photoSmall: '/profile-400.webp',
-    /** Put the CVs at public/cv-pt.pdf and public/cv-en.pdf. */
-    cv: { pt: '/cv-pt.pdf', en: '/cv-en.pdf' } as Localized,
+    /**
+     * CV download button. Hidden while undefined. After adding public/cv-pt.pdf and
+     * public/cv-en.pdf, set it to { pt: '/cv-pt.pdf', en: '/cv-en.pdf' }.
+     */
+    cv: undefined as Localized | undefined,
     socials: {
         github: 'https://github.com/ggkooo',
         linkedin: 'https://www.linkedin.com/in/giordano-berwig/',
@@ -276,12 +279,8 @@ export const experience: TimelineItem[] = [
         period: CURRENT,
         url: 'https://fflowly.online',
     },
-    {
-        kind: 'education',
-        title: { pt: 'TODO: Curso', en: 'TODO: Degree' },
-        org: 'UNIJUÍ',
-        period: { pt: 'TODO a TODO', en: 'TODO to TODO' },
-    },
+    // TODO: adicione a formação quando tiver os dados, por exemplo:
+    // { kind: 'education', title: { pt: 'Curso', en: 'Degree' }, org: 'UNIJUÍ', period: { pt: '2022 a 2026', en: '2022 to 2026' } },
 ];
 
 // ---------------------------------------------------------------- recognition
