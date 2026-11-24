@@ -30,7 +30,7 @@ const Experience = () => {
                                             href={item.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="mt-1 inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-widest text-primary-soft hover:text-white transition-colors"
+                                            className="mt-0.5 inline-flex items-center gap-1 py-1 text-sm font-semibold uppercase tracking-widest text-primary-soft hover:text-white transition-colors"
                                         >
                                             {item.org} <ArrowUpRight size={14} aria-hidden />
                                         </a>
