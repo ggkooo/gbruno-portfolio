@@ -62,7 +62,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                             href={r.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted hover:text-white transition-colors"
+                            className="inline-flex items-center gap-1.5 py-1.5 text-sm font-semibold text-muted hover:text-white transition-colors"
                         >
                             <GitHubIcon size={15} /> {r.label}
                         </a>
